@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Логотип сайта" class="logo">
+            <h1>Название Сайта</h1>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <h2>Информация</h2>
+        <p>Здесь будет информация о сайте.</p>
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2024 Название Сайта. Все права защищены.</p>
+    </footer>
+</body>
+</html>
