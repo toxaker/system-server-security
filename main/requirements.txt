@@ -1,0 +1,14 @@
+scapy
+paramiko
+loguru
+Flask
+Flask-Bootstrap
+wtforms
+Jinja2
+prompt_toolkit
+python-dotenv
+flask
+Flask-Login
+Celery
+requests
+psutil
