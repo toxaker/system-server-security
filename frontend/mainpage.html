@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Шапка сайта -->
+    <header class="animated-header">
+        <div class="header-content">
+            <img src="/static/logo.png" alt="Логотип сайта" class="logo">
+            <h1>XakerSecurity</h1>
+        </div>
+    </header>
+
+    <!-- Главное меню -->
+    <nav class="animated-menu">
+        <ul class="menu">
+            <li><a href="/info">Информация</a></li>
+            <li><a href="/tutorial">Туториал</a></li>
+            <li><a href="/developers">Разработчики</a></li>
+            <li><a href="/donate">Пожертвовать</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2 class="animated-title">Добро пожаловать на наш сайт</h2>
+        <p class="animated-text">Мы предоставляем следующие услуги:</p>
+
+        <div class="task-buttons animated-buttons">
+            <form action="/run_task" method="POST">
+                <input type="hidden" name="task" value="check_ports">
+                <button type="submit">Проверить порты</button>
+            </form>
+
+            <form action="/run_task" method="POST">
+                <input type="hidden" name="task" value="monitor_network">
+                <button type="submit">Мониторинг сети</button>
+            </form>
+
+            <form action="/run_task" method="POST">
+                <input type="hidden" name="task" value="monitor_processes">
+                <button type="submit">Мониторинг процессов</button>
+            </form>
+
+            <form action="/run_task" method="POST">
+                <input type="hidden" name="task" value="scan_nikto">
+                <button type="submit">Сканирование Nikto</button>
+            </form>
+
+            <form action="/run_task" method="POST">
+                <input type="hidden" name="task" value="create_backup">
+                <button type="submit">Создать бэкап</button>
+            </form>
+
+            <form action="/run_task" method="POST">
+                <input type="hidden" name="task" value="nmap">
+                <button type="submit">Создать бэкап</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Подвал сайта -->
+    <footer class="animated-footer">
+        <p>&copy; 2024 XackerSecurity. Права не защищены, но последствия кражи губительны.</p>
+    </footer>
+
+    <script>
+        // Скрипт для прелоадера
+        window.onload = function() {
+            document.getElementById('preloader').style.display = 'none';
+        };
+    </script>
+</body>
+</html>
